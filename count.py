@@ -1,3 +1,5 @@
+#This script will generate a .txt file with a word list containing the numbers u want
+
 from sys import argv
 
 def main(): 
