@@ -17,10 +17,7 @@ print """
 print "Welcome to crack the bank game"
 print "Your goal is to find the correct digits to crack the bank safe"
 print "Please choose a difficulty"
-print "1-Easy (3 digits code)"
-print "2-Medium (5 digits code)"
-print "3-Hard (7 digits code)"
-choice = raw_input("> ")
+
 
 def start():
 	print "1-Easy (3 digits code)"
@@ -28,6 +25,15 @@ def start():
 	print "3-Hard (7 digits code)"
 
 	choice = raw_input("> ")
+	if choice == "1":
+		level1()
+	elif choice == "2":
+		level2()
+	elif choice == "3":
+		level3()
+	else:
+		print "please choose a difficulty ..."
+		start()
 
 
 def level1():
@@ -79,14 +85,6 @@ def level3():
 		print 'Total Time:', round(endtime - starttime, 2),'secs'
 
 try:
-	if choice == "1":
-		level1()
-	elif choice == "2":
-		level2()
-	elif choice == "3":
-		level3()
-	else:
-		print "please choose a difficulty ..."
-		start()
+	start()
 except KeyboardInterrupt:
 	print "\nBye"
